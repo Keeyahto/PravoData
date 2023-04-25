@@ -17,4 +17,9 @@ class DocumentItem(scrapy.Item):
     publications = scrapy.Field()
     keywords = scrapy.Field()
     branches = scrapy.Field()
+    def __setitem__(self, key, value):
+        if key == 'keywords' and isinstance(value, str):
+            value = value.split(', ')
+        super().__setitem__(key, value)
+
 

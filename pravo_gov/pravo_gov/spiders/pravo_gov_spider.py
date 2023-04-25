@@ -71,7 +71,7 @@ class PravoGovSpiderSpider(scrapy.Spider):
         document['description'] = response.css('p::text').get()
         document['signature'] = response.css('#pd::text').get()
         document['publications'] = response.css('.tiny::text').getall()
-        document['keywords'] = response.css('#klsl::text').get().split(',')
+        document['keywords'] = response.css('#klsl::text').get()
         document['branches'] = [row.css("td i::text, td:not(:first-child)::text").getall()
                 for row in response.css("#rubr table tr")
                 if row.css("td")]

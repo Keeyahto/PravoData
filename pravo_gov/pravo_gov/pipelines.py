@@ -8,13 +8,11 @@
 from itemadapter import ItemAdapter
 import json
 from pathlib import Path
-from scrapy.utils.project import get_project_settings
-import os
+import codecs
 
 class JsonWriterPipeline:
     def open_spider(self, spider):
-        settings = get_project_settings()
-        self.file = open(Path(__file__).parent.parent / 'data/meta.jsonl', 'w', encoding='cp1251')
+        self.file = codecs.open(str(Path(__file__).parent.parent / 'data/meta.jsonl'), 'w')
 
     def close_spider(self, spider):
         self.file.close()
