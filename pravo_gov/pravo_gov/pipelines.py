@@ -12,6 +12,7 @@ import codecs
 
 class JsonWriterPipeline:
     def open_spider(self, spider):
+
         self.file = codecs.open(str(Path(__file__).parent.parent / 'data/meta.jsonl'), 'w')
 
     def close_spider(self, spider):
