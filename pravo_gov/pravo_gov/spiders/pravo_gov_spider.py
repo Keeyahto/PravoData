@@ -15,7 +15,7 @@ class PravoGovSpiderSpider(scrapy.Spider):
 
 
     def start_requests(self):
-        with open(Path(__file__).parent.parent / 'params.json') as f:
+        with open(Path(__file__).parent.parent.parent / 'params.json') as f:
             params = json.load(f)
         slc = StartLinkCreator(**params)
         start_link = slc.get_start_link()

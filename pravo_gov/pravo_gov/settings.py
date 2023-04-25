@@ -52,10 +52,6 @@ DOWNLOAD_DELAY = 3
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 
-SELENIUM_DRIVER_NAME = 'edge'
-SELENIUM_DRIVER_EXECUTABLE_PATH = 'H:\Files\Projects\PythonProjects\PravoData\pravo_gov\msedgedriver.exe'
-SELENIUM_DRIVER_ARGUMENTS=['-headless']  # '--headless' if using chrome instead of firefox
-
 #DOWNLOADER_MIDDLEWARES = {
 #    "pravo_gov.middlewares.PravoGovDownloaderMiddleware": 543,
 #}
@@ -98,4 +94,3 @@ ITEM_PIPELINES = {
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
-FEED_URI = 'H:/Files/Projects/PythonProjects/PravoData/pravo_gov/data/meta.jsonl'
